@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rytc.web.dao.AgreementMapper">
+  <resultMap id="BaseResultMap" type="com.rytc.web.domain.Agreement">
+   
+    <id column="agreement_id" jdbcType="INTEGER" property="agreementId" />
+    <result column="agreement_no" jdbcType="VARCHAR" property="agreementNo" />
+    <result column="borrow_amount" jdbcType="DOUBLE" property="borrowAmount" />
+    <result column="rate" jdbcType="VARCHAR" property="rate" />
+    <result column="term" jdbcType="INTEGER" property="term" />
+    <result column="manage_fee" jdbcType="DOUBLE" property="manageFee" />
+    <result column="financ_fee" jdbcType="DOUBLE" property="financFee" />
+    <result column="borrow_use" jdbcType="VARCHAR" property="borrowUse" />
+    <result column="borrow_user_id2" jdbcType="INTEGER" property="borrowUserId2" />
+    <result column="borrow_user_id" jdbcType="INTEGER" property="borrowUserId" />
+    <result column="repay_open_acct_name" jdbcType="VARCHAR" property="repayOpenAcctName" />
+    <result column="repay_acct_no" jdbcType="VARCHAR" property="repayAcctNo" />
+    <result column="repay_open_acct_bank" jdbcType="VARCHAR" property="repayOpenAcctBank" />
+    <result column="repay_card" jdbcType="VARCHAR" property="repayCard" />
+    <result column="sign_date" jdbcType="VARCHAR" property="signDate" />
+    <result column="cre_time" jdbcType="VARCHAR" property="creTime" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+    <result column="financ_rate" jdbcType="DOUBLE" property="financRate" />
+    <result column="path" jdbcType="VARCHAR" property="path" />
+    <result column="file_name" jdbcType="VARCHAR" property="fileName" />
+    <result column="approval_amount" jdbcType="DOUBLE" property="approvalAmount" />
+    <result column="general_rate" jdbcType="VARCHAR" property="generalRate" />
+  </resultMap>
+</mapper>

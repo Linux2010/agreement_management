@@ -1,0 +1,70 @@
+<div data-th-include="web/agreement/agreementAdd"></div>
+<div class="card">
+    <div class="card-block">
+        <div class="table-responsive">
+            <div id="data-table_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_buttons hidden-sm-down actions">
+                    <span class="actions__item zmdi zmdi-search" onclick="search()" title="搜索" />
+                    <span class="actions__item zmdi zmdi-refresh-alt" onclick="refresh()" title="刷新" />
+                    <div class="dropdown actions__item">
+                        <i data-toggle="dropdown" class="zmdi zmdi-download">
+		            </i>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:void(0)" class="dropdown-item" data-table-action="excel" onclick="exportAgreementExcel()">
+		                    Excel (.xlsx)
+		                </a>
+                            <a href="javascript:void(0)" class="dropdown-item" data-table-action="csv" onclick="exportAgreementCsv()">
+		                    CSV (.csv)
+		                </a>
+                        </ul>
+                    </div>
+                    <div class="dropdown actions__item" shiro:hasAnyPermissions="agreement:add,agreement:delete,agreement:update">
+                        <i data-toggle="dropdown" class="zmdi zmdi-more-vert"></i>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:void(0)" class="dropdown-item" data-toggle="modal" data-target="#agreement-add" shiro:hasPermission="agreement:add">新增协议</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="updateAgreement()" shiro:hasPermission="agreement:update">修改协议</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="deleteAgreements()" shiro:hasPermission="agreement:delete">删除协议</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="data-table_filter" class="dataTables_filter">
+                    <form class="agreement-table-form">
+                        <div class="row">
+                         <div class="col-sm-3">
+                               <div class="input-group">
+                               <span class="input-group-addon">
+					               	条件：
+					            </span>
+                                   <select class="form-control" name="type">
+                                       <option value="1">协议编号</option>
+                                       <option value="2">姓名</option>
+                                       <option value="3">手机号</option>
+                                       <option value="4">身份证号</option>
+                                   </select>
+                                    <span class="input-group-addon">
+					               	值：
+					            </span>
+                                    <input type="text" name="val" class="form-control">
+                               </div>
+                             </div>
+                             <div class="col-sm-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	创建时间：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="timeField" class="form-control">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <table id="agreementTable" data-mobile-responsive="true" class="mb-bootstrap-table text-nowrap"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/web/agreement/agreement.js}"></script>
+<script data-th-src="@{js/app/web/agreement/agreementEdit.js}"></script>

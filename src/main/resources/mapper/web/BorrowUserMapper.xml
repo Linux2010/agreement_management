@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rytc.web.dao.BorrowUserMapper" >
+  <resultMap id="BaseResultMap" type="com.rytc.web.domain.BorrowUser" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="borrow_user_id" property="borrowUserId" jdbcType="INTEGER" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="id_num" property="idNum" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="county" property="county" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="dept_id" property="deptId" jdbcType="DECIMAL" />
+    <result column="is_del" property="isDel" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,187 @@
+<div class="modal fade" id="agreement-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="agreement-add-modal-title">新增协议</h3>
+            </div>
+            <div class="modal-body">
+                <form id="agreement-add-form">
+                <input type="hidden" name="agreementId" class="form-control">
+                <input type="hidden" name="state" value="2" class="form-control">
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	借款人：
+					            </span>
+                                <div class="form-group">
+                                    <select name="borrowUserId" class="ms-choice" id="borrowUserId" required>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	共同借款人：
+					            </span>
+                                <div class="form-group">
+                                    <select name="borrowUserId2" class="ms-choice" id="borrowUserId2">
+                                    	
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	还款账号开户名：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="repayOpenAcctName" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	还款账号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="repayAcctNo" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	还款账号开户行：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="repayOpenAcctBank" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	指定还款人身份证号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="repayCard" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	签订日期：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="signDate" class="form-control" id="signDate">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	审批金额：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="approvalAmount" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	综合费率(%)：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="generalRate" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	借款期限：
+					            </span>
+					            <div class="form-group">
+                                    <select name="term" class="ms-choice" id="term" required>
+                                	<option value="">--请选择--</option>
+                                	<option value="6">6个月</option>
+                                	<!-- <option value="7">7个月</option>
+                                	<option value="8">8个月</option>
+                                	<option value="9">9个月</option>
+                                	<option value="10">10个月</option>
+                                	<option value="11">11个月</option> -->
+                                	<option value="12">12个月</option>
+                                	<!-- <option value="13">13个月</option>
+                                	<option value="14">14个月</option>
+                                	<option value="15">15个月</option>
+                                	<option value="16">16个月</option>
+                                	<option value="17">17个月</option> -->
+                                	<option value="18">18个月</option>
+                                	<!-- <option value="24">24个月</option>
+                                	<option value="36">36个月</option> -->
+                                </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	融资服务费率(%)：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="financRate" class="form-control" value="2.5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	借款用途：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="borrowUse" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="agreement-add-button2" name="cre">生成协议</button>
+                <button type="button" class="btn btn-save" id="agreement-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/web/agreement/agreementAdd.js}"></script>
+<script data-th-src="@{js/app/laydate/laydate.js}"></script>
